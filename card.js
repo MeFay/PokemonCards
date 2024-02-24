@@ -1,4 +1,4 @@
-const Card = (type, image, name, hp, attacks, defense, specialAttack, specialDefense, speed, height, weight, ability, hiddenAbility) => {
+const Card = (image, type, name, hp, attacks, defense, specialAttack, specialDefense, speed, height, weight, ability, hiddenAbility) => {
     const cardsContainer = document.getElementById("my-cards");
   
     const card = document.createElement("div");

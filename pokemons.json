@@ -2,8 +2,8 @@
   "pokemons": [
     {
       "image": "Images/pikachu.png",
-      "name": "Pikachu",
       "type": "ELECTRIC",
+      "name": "Pikachu",
       "hp": "90",
       "attacks": "50",
       "defense": "50",
@@ -17,8 +17,8 @@
     },
     {
       "image": "Images/charizard.png",
-      "name": "Charizard",
       "type": "FLYING",
+      "name": "Charizard",
       "hp": "100",
       "attacks": "85",
       "defense": "109",
@@ -32,8 +32,8 @@
     },
     {
       "image": "Images/blastoise.png",
-      "name": "Blastoise",
       "type": "WATER",
+      "name": "Blastoise",
       "hp": "78",
       "attacks": "195",
       "defense": "85",
@@ -47,8 +47,8 @@
     },
     {
       "image": "Images/flareon.png",
-      "name": "Flareon",
       "type": "FIRE",
+      "name": "Flareon",
       "hp": "65",
       "attacks": "110",
       "defense": "95",
@@ -62,8 +62,8 @@
     },
     {
       "image": "Images/bulbasaur.png",
-      "name": "Bulbasaur",
       "type": "POISON",
+      "name": "Bulbasaur",
       "hp": "45",
       "attacks": "50",
       "defense": "50",
@@ -77,8 +77,8 @@
     },
     {
       "image": "Images/gengar.png",
-      "name": "Gengar",
       "type": "POISON",
+      "name": "Gengar",
       "hp": "110",
       "attacks": "75",
       "defense": "130",
@@ -92,8 +92,8 @@
     },
     {
       "image": "Images/alakazam.png",
-      "name": "Alakazam",
       "type": "PSYCHIC",
+      "name": "Alakazam",
       "hp": "120",
       "attacks": "95",
       "defense": "135",

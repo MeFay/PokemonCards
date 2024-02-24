@@ -8,8 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
 function renderPokemonCards(pokemons) {
   pokemons.forEach((pokemon) => {
     Card(
-      pokemon.name,
+      pokemon.image,
       pokemon.type,
+      pokemon.name,
       pokemon.hp,
       pokemon.attacks,
       pokemon.defense,

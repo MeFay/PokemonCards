@@ -43,6 +43,10 @@ body {
   background: linear-gradient(to bottom right, #fdbb2d 0%, #ff0 100%);
 }
 
+.card-water{
+  background: linear-gradient(to bottom right, #43b448 0%, rgb(49, 183, 109) 100%);
+}
+
 .card img {
   width: 30%;
   height: auto;

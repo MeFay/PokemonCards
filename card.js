@@ -13,10 +13,22 @@ const Card = (
   ability,
   hiddenAbility
 ) => {
+  const typesMap = {
+    FIRE: "card-fire",
+    WATER: "card-water",
+    GRASS: "card-grass",
+    ELECTRIC: "card-eletric",
+    FLYING: "card-flying",
+    POISON: "card-poison",
+    PSYCHIC: "card-psychic"
+  };
+
   const cardsContainer = document.getElementById("my-cards");
 
   const card = document.createElement("div");
-  card.className = "card";
+  card.className = `card ${typesMap[type]}`;
+
+  
 
   const cardImage = document.createElement("img");
   cardImage.src = image;
@@ -28,11 +40,15 @@ const Card = (
 
   const cardName = document.createElement("h2");
   cardName.innerHTML = name;
-  card.appendChild(cardName);
 
   const cardhp = document.createElement("p");
-  cardhp.innerHTML = hp;
+  cardhp.innerHTML = `HP:`;
   card.appendChild(cardhp);
+
+  const valueSpan = document.createElement("span");
+  valueSpan.innerHTML = hp;
+
+  cardhp.appendChild(valueSpan);
 
   const cardattacks = document.createElement("p");
   cardattacks.innerHTML = attacks;

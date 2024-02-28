@@ -40,11 +40,48 @@ body {
   font-size: 1.7em;
   row-gap: 8px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background: linear-gradient(to bottom right, #fdbb2d 0%, #ff0 100%);
+}
+
+.cardStats{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 70%;
+  align-items: center;
+}
+
+/*
+.cardAbilityContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+
+}*/
+
+.card-fire{
+  background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
 }
 
 .card-water{
-  background: linear-gradient(to bottom right, #43b448 0%, rgb(49, 183, 109) 100%);
+  background: linear-gradient(120deg, #1cb5e0 0%, #000851 100%);
+}
+
+.card-eletric{
+  background: linear-gradient(to bottom right, #fdbb2d 0%, #ff0 100%);
+}
+
+.card-flying{
+  background: linear-gradient(110deg, red 0%, white 100%);
+}
+
+.card-poison{
+  background: linear-gradient(20deg, #191919 0%, #100b32 33%, #5c0249 100%);
+}
+
+.card-psychic{
+  background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%);
 }
 
 .card img {
@@ -61,3 +98,4 @@ body {
   font-size: 0.7em;
   color: black;
 }
+

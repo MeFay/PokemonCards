@@ -16,11 +16,20 @@ const Card = (
   const typesMap = {
     FIRE: "card-fire",
     WATER: "card-water",
-    GRASS: "card-grass",
     ELECTRIC: "card-eletric",
     FLYING: "card-flying",
     POISON: "card-poison",
-    PSYCHIC: "card-psychic"
+    PSYCHIC: "card-psychic",
+  };
+
+  const nameMap = {
+    Pikachu: "Pikachu",
+    Charizard: "Charizard",
+    Blastoise: "Blastoise",
+    Flareon: "Flareon",
+    Bulbasaur: "Bulbasaur",
+    Gengar: "Gengar",
+    Alakazam: "Alakazam",
   };
 
   const cardsContainer = document.getElementById("my-cards");
@@ -28,64 +37,123 @@ const Card = (
   const card = document.createElement("div");
   card.className = `card ${typesMap[type]}`;
 
-  
-
   const cardImage = document.createElement("img");
   cardImage.src = image;
   card.appendChild(cardImage);
 
+  const cardStats = document.createElement("div");
+  card.appendChild(cardStats);
+
   const cardtype = document.createElement("p");
   cardtype.innerHTML = type;
-  card.appendChild(cardtype);
+  cardStats.appendChild(cardtype);
 
   const cardName = document.createElement("h2");
   cardName.innerHTML = name;
+  cardStats.appendChild(cardName);
 
+  ////////////////////////////////HP////////////////////////////////
   const cardhp = document.createElement("p");
   cardhp.innerHTML = `HP:`;
-  card.appendChild(cardhp);
+  cardStats.appendChild(cardhp);
 
-  const valueSpan = document.createElement("span");
-  valueSpan.innerHTML = hp;
+  const hpValue = document.createElement("span");
+  hpValue.innerHTML = hp;
+  cardhp.appendChild(hpValue);
 
-  cardhp.appendChild(valueSpan);
+  ////////////////////////////////ATTACK////////////////////////////////
+  const cardAttacks = document.createElement("p");
+  cardAttacks.innerHTML = `Attack: `;
+  cardStats.appendChild(cardAttacks);
 
-  const cardattacks = document.createElement("p");
-  cardattacks.innerHTML = attacks;
-  card.appendChild(cardattacks);
+  const cardAttacksValue = document.createElement("span");
+  cardAttacksValue.innerHTML = attacks;
+  cardAttacks.appendChild(cardAttacksValue);
 
-  const carddefense = document.createElement("p");
-  carddefense.innerHTML = defense;
-  card.appendChild(carddefense);
+  ////////////////////////////////DEFENSE////////////////////////////////
+  const cardDefense = document.createElement("p");
+  cardDefense.innerHTML = `Defense: `;
+  cardStats.appendChild(cardDefense);
 
+  const cardDefenseValue = document.createElement("span");
+  cardDefenseValue.innerHTML = defense;
+  cardDefense.appendChild(cardDefenseValue);
+
+  ////////////////////////////////SPECIAL ATTACK////////////////////////////////
   const cardspecialAttack = document.createElement("p");
-  cardspecialAttack.innerHTML = specialAttack;
-  card.appendChild(cardspecialAttack);
+  cardspecialAttack.innerHTML = `Special Attack: `;
+  cardStats.appendChild(cardspecialAttack);
 
+  const cardspecialAttackValue = document.createElement("span");
+  cardspecialAttackValue.innerHTML = specialAttack;
+  cardspecialAttack.appendChild(cardspecialAttackValue);
+
+  ////////////////////////////////SPECIAL DEFENSE ////////////////////////////////
   const cardspecialDefense = document.createElement("p");
-  cardspecialDefense.innerHTML = specialDefense;
-  card.appendChild(cardspecialDefense);
+  cardspecialDefense.innerHTML = `Special Defense: `;
+  cardStats.appendChild(cardspecialDefense);
 
+  const cardspecialDefenseValue = document.createElement("span");
+  cardspecialDefenseValue.innerHTML = specialDefense;
+  cardspecialDefense.appendChild(cardspecialDefenseValue);
+
+  ////////////////////////////////SPEED ////////////////////////////////
   const cardspeed = document.createElement("p");
-  cardspeed.innerHTML = speed;
-  card.appendChild(cardspeed);
+  cardspeed.innerHTML = `Speed: `;
+  cardStats.appendChild(cardspeed);
 
+  const cardspeedValue = document.createElement("span");
+  cardspeedValue.innerHTML = speed;
+  cardspeed.appendChild(cardspeedValue);
+
+  ////////////////////////////////HEIGHT ////////////////////////////////
   const cardheight = document.createElement("p");
-  cardheight.innerHTML = height;
-  card.appendChild(cardheight);
+  cardheight.innerHTML = `Height: `;
+  cardStats.appendChild(cardheight);
 
+  const cardheightValue = document.createElement("span");
+  cardheightValue.innerHTML = height;
+  cardheight.appendChild(cardheightValue);
+
+  ////////////////////////////////WEIGHT ////////////////////////////////
   const cardweight = document.createElement("p");
-  cardweight.innerHTML = weight;
-  card.appendChild(cardweight);
+  cardweight.innerHTML = `Weight: `;
+  cardStats.appendChild(cardweight);
 
-  const cardability = document.createElement("p");
-  cardability.innerHTML = ability;
-  card.appendChild(cardability);
+  const cardweightValue = document.createElement("span");
+  cardweightValue.innerHTML = weight;
+  cardweight.appendChild(cardweightValue);
 
-  const cardhiddenAbility = document.createElement("p");
-  cardhiddenAbility.innerHTML = hiddenAbility;
-  card.appendChild(cardhiddenAbility);
+  ////////////////////////////////ABILITY SECTION////////////////////////////////
+  const cardAbilityContainer = document.createElement("div");
+  cardStats.appendChild(cardAbilityContainer);
 
+    ////////////////////////////////NORMAL ABILITY SECTION////////////////////////////////
+  const cardAbilityDiv = document.createElement("div");
+  cardAbilityContainer.appendChild(cardAbilityDiv);
+
+  const cardAbility = document.createElement("p");
+  cardAbility.innerHTML = `Ability: `;
+  cardAbilityDiv.appendChild(cardAbility);
+
+  const cardAbilityValue = document.createElement("span");
+  cardAbilityValue.innerHTML = ability;
+  cardAbility.appendChild(cardAbilityValue);
+
+
+  ////////////////////////////////HIDDEN ABILITY SECTION////////////////////////////////
+  const cardHiddenAbilityDiv = document.createElement("div");
+  cardAbilityContainer.appendChild(cardHiddenAbilityDiv);
+  
+  const cardHiddenAbility = document.createElement("p");
+  cardHiddenAbility.innerHTML = `Hidden Ability: `;
+  cardHiddenAbilityDiv.appendChild(cardHiddenAbility);
+
+  const cardHiddenAbilityValue = document.createElement("span");
+  cardHiddenAbilityValue.innerHTML = ability;
+  cardHiddenAbility.appendChild(cardHiddenAbilityValue);
+
+  
   cardsContainer.appendChild(card);
 };
 

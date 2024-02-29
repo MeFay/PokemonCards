@@ -59,6 +59,14 @@ body {
   background-color: #ddd;
 }
 
+.abilities {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  flex-direction: row;
+  column-gap: 45px;
+}
+
 #my-cards {
   max-width: 100%;
   border-radius: 6px;
@@ -82,23 +90,18 @@ body {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.cardStats {
+.card-stats {
   display: flex;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.65);
-  width: 70%;
+  width: 90%;
   align-items: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 25px;
 }
-
-/*
-.cardAbilityContainer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
-
-}*/
 
 .card-fire {
   background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
@@ -125,13 +128,27 @@ body {
 }
 
 .card img {
-  width: 30%;
+  width: 50%;
   height: auto;
+  padding: 25px;
+}
+
+.card-type {
+  color: #ddd;
+  display: flex;
+  padding: 0px 10px;
+  background-color: black;
+  border-radius: 6px;
+  line-height: 36px;
+  align-self: end;
+  position: relative;
+  top: -30px;
+  right: 10px;
 }
 
 .card h2 {
-  font-size: 1em;
-  color: black;
+  font-size: 20px;
+  font-weight: 900;
 }
 
 .card p {

@@ -59,7 +59,7 @@ body {
   background-color: #ddd;
 }
 
-.abilities {
+.ABILITIES {
   display: flex;
   justify-content: space-between;
   padding: 15px;
@@ -148,10 +148,18 @@ body {
 
 .card h2 {
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 700;
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
 }
 
 .card p {
   font-size: 0.7em;
   color: black;
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+}
+
+.card span {
+  color: black;
+  font-weight: 700;
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
 }

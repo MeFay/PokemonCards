@@ -2,10 +2,15 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
   box-sizing: border-box;
 }
-
+:root {
+  --COLOR1: white;
+  --FONT-WEIGHT-1: 300;
+  --FONT-WEIGHT-2: 700;
+  --SIXTEEN-PX: 16px;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -17,54 +22,46 @@ body {
   flex-direction: column;
   min-height: 100vh;
   font-size: 10px;
-  padding: 16px;
-  row-gap: 15px;
-}
-
-.dropbtn {
-  padding: 16px;
-  color: #414141;
-  font-size: 14px;
-  border: 1px solid #bcbcbc;
-  cursor: pointer;
-  border-radius: 2px;
-  background-color: white;
-}
-
-.dropbtn:hover {
-  border: 1px solid black;
+  padding: var(--SIXTEEN-PX);
+  row-gap: var(--SIXTEEN-PX);
 }
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  width: 212px;
+  height: 32px;
+  line-height: 32px;
+  color: #414141;
+  font-size: 14px;
+  border: 1px solid #bcbcbc;
+  border-radius: 2px;
+  background-color: white;
+  cursor: pointer;
+  user-select: none;
 }
 
 .dropdown-content {
   display: none;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.dropdown-content .option {
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+.dropdown-content .option:hover {
+  background-color: #414141;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
-}
-
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-
-.ABILITIES {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  flex-direction: row;
-  column-gap: 45px;
 }
 
 #my-cards {
@@ -75,11 +72,11 @@ body {
   justify-content: center;
   flex-direction: column;
   font-size: 1.7em;
-  row-gap: 16px;
+  row-gap: var(--SIXTEEN-PX);
 }
 
 .card {
-  max-width: 40%;
+  max-width: 500px;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -96,11 +93,76 @@ body {
   background-color: rgba(255, 255, 255, 0.65);
   width: 90%;
   align-items: center;
-  padding: 15px;
+  padding: var(--SIXTEEN-PX);
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: var(--FONT-WEIGHT-1);
   font-size: 22px;
-  line-height: 25px;
+  line-height: 26px;
+}
+
+.stat-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--SIXTEEN-PX);
+}
+
+.stat-label,
+.stat-value {
+  width: 50%;
+}
+
+.stat-label {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.stat-value {
+  font-weight: var(--FONT-WEIGHT-2);
+}
+
+.ABILITIES {
+  display: flex;
+  justify-content: space-evenly;
+  padding: var(--SIXTEEN-PX);
+  flex-direction: row;
+  column-gap: 45px;
+  width: 100%;
+}
+
+.ABILITIES p {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+  padding: 26px;
+}
+
+.card-type {
+  color: #ddd;
+  display: flex;
+  padding: 0px 10px;
+  background-color: black;
+  border-radius: 6px;
+  line-height: 36px;
+  align-self: end;
+  position: relative;
+  top: -30px;
+  right: 10px;
+  margin-bottom: 0;
+}
+
+.card h2 {
+  font-size: 0.7em;
+  font-weight: var(--FONT-WEIGHT-2);
+}
+
+.card p {
+  font-size: 0.7em;
 }
 
 .card-fire {
@@ -125,41 +187,4 @@ body {
 
 .card-psychic {
   background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%);
-}
-
-.card img {
-  width: 50%;
-  height: auto;
-  padding: 25px;
-}
-
-.card-type {
-  color: #ddd;
-  display: flex;
-  padding: 0px 10px;
-  background-color: black;
-  border-radius: 6px;
-  line-height: 36px;
-  align-self: end;
-  position: relative;
-  top: -30px;
-  right: 10px;
-}
-
-.card h2 {
-  font-size: 20px;
-  font-weight: 700;
-  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-}
-
-.card p {
-  font-size: 0.7em;
-  color: black;
-  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-}
-
-.card span {
-  color: black;
-  font-weight: 700;
-  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
 }

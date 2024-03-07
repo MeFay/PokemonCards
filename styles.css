@@ -37,7 +37,6 @@ body {
   border-radius: 2px;
   background-color: white;
   cursor: pointer;
-  user-select: none;
 }
 
 .dropdown-content {
@@ -60,9 +59,14 @@ body {
   color: white;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content--show {
   display: block;
 }
+
+.dropdown-content--hide {
+  display: none; 
+}
+
 
 #my-cards {
   max-width: 100%;
